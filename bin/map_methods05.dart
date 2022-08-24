@@ -4,10 +4,13 @@ the key in it is last name,
 change it to surname
 */
 
-void main() {}
+void main() {
+  print(func({"last_name": "12"}));
+}
 
 Map func(Map data) {
-  //your code here
-
+  Map map = {"surname": data["last_name"]};
+  data.remove("last_name");
+  data.addAll(map);
   return data;
 }
